@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "install": "node src/setup.js"
+  },
   "dependencies": {
     "dotenv": "^14.2.0",
     "puppeteer": "^13.1.1",
