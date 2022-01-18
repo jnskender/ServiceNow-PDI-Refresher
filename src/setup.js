@@ -1,6 +1,5 @@
 import readline from 'readline-promise';
 import fs from 'fs';
-import path from "path";
 
 const rlp = readline.default.createInterface({
   terminal: true,
@@ -29,4 +28,4 @@ INSTANCE_PASSWORD=${password}
 
 await fs.promises.writeFile("../.env", template)
 
-console.log(instance, username, password)
+console.log("Created .env file for these configurations.")
