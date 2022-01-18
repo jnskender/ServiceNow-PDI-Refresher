@@ -1,7 +1,11 @@
 {
   "type": "module",
+  "scripts": {
+    "install": "node src/setup.js"
+  },
   "dependencies": {
     "dotenv": "^14.2.0",
-    "puppeteer": "^13.1.1"
+    "puppeteer": "^13.1.1",
+    "readline-promise": "^1.0.5"
   }
 }
