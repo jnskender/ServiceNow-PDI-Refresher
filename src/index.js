@@ -19,8 +19,8 @@ import puppeteer from "puppeteer"
     return false;
   }
 
-  const browser = await puppeteer.launch({ headless: false, slowMo: 50 })
-  //const browser = await puppeteer.launch()
+  // const browser = await puppeteer.launch({ headless: false, slowMo: 50 })
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
   const navigationPromise = page.waitForNavigation()
 
