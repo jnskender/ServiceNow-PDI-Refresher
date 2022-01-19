@@ -20,7 +20,9 @@ import puppeteer from "puppeteer"
   }
 
   // const browser = await puppeteer.launch({ headless: false, slowMo: 50 })
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+	executablePath: "/usr/bin/chromium"
+   });
   const page = await browser.newPage()
   const navigationPromise = page.waitForNavigation()
 
