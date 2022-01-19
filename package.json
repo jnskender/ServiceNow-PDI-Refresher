@@ -4,6 +4,7 @@
     "install": "node src/setup.js"
   },
   "dependencies": {
+    "ckey": "^1.0.3",
     "dotenv": "^14.2.0",
     "puppeteer": "^13.1.1",
     "readline-promise": "^1.0.5"

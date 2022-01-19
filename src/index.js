@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import  path, { dirname } from 'path';
+import ck from "ckey";
 import puppeteer from "puppeteer"
 
 (async () => {
@@ -10,10 +11,11 @@ import puppeteer from "puppeteer"
   //tell dotenv it can find our .env file in the root directory. Otherwise it looks for it in src.
   dotenv.config({path: path.resolve(__dirname, './.env')})
 
-  const userName = process.env.INSTANCE_USER_NAME;
-  const password = process.env.INSTANCE_PASSWORD;
-  const instanceName = process.env.INSTANCE_NAME;
+  const userName = ck.INSTANCE_USER_NAME;
+  const password = ck.INSTANCE_PASSWORD;
+  const instanceName = ck.INSTANCE_NAME;
 
+  console.log(userName, password, instanceName)
   if(!userName || !password || !instanceName){
     console.log("Please ensure you configure your instance settings as a .env file")
     return false;
