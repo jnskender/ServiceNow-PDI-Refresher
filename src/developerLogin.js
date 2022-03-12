@@ -1,9 +1,17 @@
 import { chromium } from 'playwright';
 import ck from "ckey"; //dotenv plugin that recursively checks directories for a .env
-
+import os from "os"
 async function login() {
 
-  const browser = await chromium.launch({ headless: false, slowMo: 100 })
+
+  const browserConfig = {
+    headless: true
+  }
+  //raspberry pi and other arm based systems need their path explicitly defined.
+  if (os.arch() === "arm") {
+    browserConfig[executablePath] = "/usr/bin/chromium"
+  }
+  const browser = await chromium.launch(browserConfig)
   const page = await browser.newPage()
   const navigationPromise = page.waitForNavigation()
 
