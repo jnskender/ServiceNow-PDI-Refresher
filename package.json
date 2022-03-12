@@ -1,12 +1,17 @@
 {
   "type": "module",
   "scripts": {
-    "install": "node src/setup.js"
+    "config": "node src/setup.js"
   },
   "dependencies": {
     "ckey": "^1.0.3",
     "dotenv": "^14.2.0",
     "puppeteer": "^13.1.1",
-    "readline-promise": "^1.0.5"
+    "readline-promise": "^1.0.5",
+    "zx": "^4.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.19.2",
+    "playwright": "^1.19.2"
   }
 }
